@@ -1,0 +1,17 @@
+-- SELECT * FROM vueling.Avions;
+INSERT INTO Avions (capacitat, model) VALUES (55,'VY-01');
+INSERT INTO Avions (capacitat, model) VALUES (65,'VY-02');
+INSERT INTO Avions (capacitat, model) VALUES (40,'VY-03');
+INSERT INTO Avions (capacitat, model) VALUES (45,'VY-04');
+INSERT INTO Avions (capacitat, model) VALUES (55,'VY-05');
+INSERT INTO Avions (capacitat, model) VALUES (65,'VY-06');
+INSERT INTO Avions (capacitat, model) VALUES (75,'VY-07');
+INSERT INTO Avions (capacitat, model) VALUES (55,'VY-08');
+INSERT INTO Avions (capacitat, model) VALUES (55,'VY-09');
+-- SELECT * FROM vueling.Seients;
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-03'));
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-05'));
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-09'));
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-02'));
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-01'));
+INSERT INTO Seients (id_avio) VALUES ((SELECT id_avio FROM vueling.Avions WHERE model = 'VY-04'));
